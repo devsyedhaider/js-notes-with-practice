@@ -1,0 +1,1422 @@
+/* What is js 
+
+Js is a programing language to improves the user experience of the web page by 
+converting it from a static page into an interactive one.
+
+*/
+
+/*
+-------------------------------------------------------------------------  
+-------------------------- Console.log ----------------------------------
+-------------------------------------------------------------------------
+inc
+We used console.log('') to print the message in the console .
+
+console.log('My Name Is Syed Ali Haider');
+
+*/
+
+/* 
+-------------------------------------------------------------------------  
+-------------------------- Alert ---------------------------------------
+-------------------------------------------------------------------------
+
+We used alert('') to show the information for the user .
+
+alert('My Name Is Syed Ali Haider');
+
+*/
+
+/* 
+-------------------------------------------------------------------------  
+-------------------------- String ---------------------------------------
+-------------------------------------------------------------------------
+
+String used to store a text . We store any thing in single and duble cout is called a string . 
+
+let data  = " My name is Syed Ali Haider " 
+
+
+------------------------- String Methods ------------------------
+
+1 ) lenght is use to find the string lenght . 
+
+-- Exp 
+
+let name = 'haider';
+
+console.log(name.length)
+
+
+2 ) Uppercase is use the string text convert into uppercase .
+
+--- Exp
+
+let name = 'haider';
+
+console.log(name.toUpperCase())
+
+
+3 ) Lowercase is use to conert the string into lower case .
+
+--- Exp
+
+let name = 'haider';
+
+console.log(name.toLowerCase())
+
+
+4 ) slice is used to cut the string .
+
+--- Exp
+
+let name = 'haider';
+
+console.log(name.slice(2 , 5))
+
+
+5 ) Replace is used to string element .
+
+--- Exp
+
+let name = 'haider naqvi';
+
+console.log(name.replace('haider' , 'ali'))
+
+
+6 ) Concat is used to concat one string into anoter string .
+
+--- Exp 
+
+let name = 'haider';
+lat age = 16;
+
+console.log(name + ' ' + age)
+
+
+7 ) trim is used to remove the white space in array.
+
+--- Exp 
+
+let color = " white ";
+console.log(color.trim())
+
+
+
+*/
+
+/* 
+
+-------------------------------------------------------------------------  
+-------------------------- Variable -------------------------------------
+-------------------------------------------------------------------------
+
+
+Variable is a container thats hold a value .
+
+syntax : var name = "Haider";
+
+var is a key ;
+name is a variable name ;
+"Haider" is a value ;
+
+
+------------------------------ Naming variable rules 
+
+1 ) Variable name must start be a letter , an a underscore ( _ , $) or a dollar sign .
+2 ) Variable name cannot not start with a number .
+3 ) Variable name cannot be a same name .
+4 ) Variable name are case sensitives .
+
+
+---------------------------- Types of variables
+
+There are three types of variables 
+
+1 ) var 
+2 ) let 
+3 ) const
+
+--------- var 
+
+In var variable we can reasign the variable name and we can redeclare .
+
+var name = 'haider'
+var name = 'massom'
+
+console.log(name) //  output is massom
+
+--------- let
+
+In let variable we can reasign the variable name but we cannot redeclare .
+
+let name = 'massom'
+name = 'hassan'
+
+console.log(name) //  output is hassan
+
+-------- Const 
+
+In const variable we can not reasign the varable and we can't redeclare variable because it is constant variable .
+
+const name = 'mahtab'
+console.log(name) //  output is mahtab
+
+*/
+
+/* 
+-------------------------------------------------------------------------  
+-------------------------- Data Types -----------------------------------
+-------------------------------------------------------------------------
+
+Data types define the type of values thats a variable can hold.
+
+In Js there are two types of data types 
+
+
+1 ) Primitive Data Types
+2 ) Object Data Types 
+
+
+--------------------- Primitive Data Types
+
+1 ) String  // Represents a single and duble code  .
+
+-- Exp 
+
+let name = 'haider'
+let name = "massom"
+let name = `hassan` // template literals
+
+2 ) Number  // Represents a Number .
+
+--- Exp
+
+let age = 25
+let age = 25.5
+let age = 25.5e-10
+
+
+3 ) Boolean
+
+--- Exp 
+
+let isAdult = true
+let isAdult = false
+let isAdult = 1 // false
+let isAdult = 0 // true
+
+4 ) Null
+
+--- Exp 
+
+let person = null
+console.log(person) // output is null
+
+5 ) Undefined
+
+--- Exp
+
+let person
+console.log(person) // output is undefined
+
+
+6 ) Symbol
+
+--- Exp
+
+let id = Symbol('id')
+
+7 ) BigInt
+
+--- Exp 
+
+let bigInt = 10n
+
+
+
+--------------------- Object Data Types
+
+1 ) An object
+
+-- Exp 
+
+let person = {
+name: 'John',
+age: 25,
+city: 'New York'
+}
+
+console.log(person) // output is { name: 'John', age: 25, city:
+
+2 ) Array
+
+--- Exp
+
+let numbers = [1, 2, 3, 4, 5]
+console.log(numbers) // output is [1, 2, 3, 4,
+
+3 ) A date
+
+--- Exp
+
+let date = new Date()
+console.log(date) // output is current date and time
+
+*/
+
+/* 
+----------------------------------------------------------------
+---------------------- Math -----------------------------------
+----------------------------------------------------------------
+
+Math =  an intrinsic object that provides basic mathematics functionality and constants .
+
+let x = 3.14;
+let y = 5;
+let z = 9;
+let maximum;
+let minimum;
+
+x = Math.round(x);  // its output is 3
+x = Math.floor(x);  // its output is 3 
+x = Math.ceil(x); // its output is 4
+x = Math.pow(x, 2); // its output is 9.8596
+x = Math.sqrt(x); // 1.772004514666935
+x = Math.abs(x); // convert neg to in postive 
+maximum = Math.max(x, y, z); // find max value  output is 9
+minimum = Math.min(x, y, z); // find the min value output is 3.15
+x = Math.PI; // 3.1415......
+
+console.log(x);
+
+
+*/
+
+/* 
+
+----------------------------------------------------------------
+---------------------- ParseInt & ParseFloat -------------------
+----------------------------------------------------------------
+  
+1 ) --  ParseInt is js build in feature use to convert string into the number .
+
+----- Exp 
+
+let num = "123";
+console.log(parseInt(num));
+
+
+2 ) -- ParseFloat is js build in feature use to convert string into the number  and convert it to a floating 
+       point number.
+
+----- Exp 
+
+let num = "1.9";
+console.log(parseFloat(num));
+
+
+*/
+
+/* 
+----------------------------------------------------------------
+---------------------- Expresssion -----------------------------
+----------------------------------------------------------------
+
+An expression is a combination of values, variables, and operators, which computes to a value.
+
+-- Exp 
+
+  Operater
+   |  
+ 5 * 10
+ \   /
+Operand
+
+
+5 + 10
+
+*/
+
+/* 
+----------------------------------------------------------------
+---------------------- Prompts  --------------------------------
+----------------------------------------------------------------
+
+In javascript prompt is use to get some information into the user .
+
+--- Exp
+
+let userinfo = prompt('Enter your name ?')
+console.log(userinfo)
+
+/* 
+
+
+
+
+/* 
+----------------------------------------------------------------
+---------------------- Template Litlers  --------------------------------
+----------------------------------------------------------------
+
+In javascript template litlers use to concatination in two variables .
+
+
+--- Exp
+
+let name = ' Ali Hiader';
+let age = 18;
+
+console.log(`My name is ${name} and My age is ${age} `)
+
+
+/* 
+
+
+
+----------------------------------------------------------------
+---------------------- Concatination ---------------------------
+----------------------------------------------------------------
+
+One string add into another string is called a concatinatoin .
+
+-- Exp 
+
+let name = "Haider";
+let lastName =  "Naqvi"
+
+console.log(name + lastName)
+
+*/
+
+/* 
+----------------------------------------------------------------
+---------------------- Operaters -------------------------------
+----------------------------------------------------------------
+
+JavaScript operators are special symbols used in scripts to perform operations
+on operands, such as arithmetic calculations, logical comparisons, or value 
+assignments.
+
+
+------------------- Types are Operaters.
+
+
+There are four types of operater in js .
+
+1 ) assigment operaters. ( = , += , -= , *= , /= , %= , **= )
+2 ) Arithmetic operaters. ( + , - , * , / , % )
+3 ) Comparision operaters. ( == , != , === , > , < , >= , <= , ? ) 
+4 ) Logical operaters. ( && , || , ! )
+
+
+
+1 ) ------------ Assigment Operaters 
+
+let a = 10;
+let b = 20;
+
+console.log(a = b) // 20
+console.log(a += b) // 30
+console.log(a -= b) // 20
+console.log(a *= b) // 200
+console.log(a /= b) // 0.5
+console.log(a %= b) // 10
+console.log(a **= b) // 100000000000000000000
+
+
+1 ) ------------ Arithmetic Operaters 
+
+let a = 10;
+let b = 20;
+
+console.log(a + b) // 30
+console.log(a - b) // -10
+console.log(a * b) // 200
+console.log(a / b) // 0.5
+console.log(a % b) // 10
+
+
+3 ) ------------ Comparision Operaters 
+
+let a = 10;
+let b = 20;
+
+console.log(a == b) // false
+console.log(a != b) // true
+console.log(a === b) // false
+console.log(a > b) // false
+console.log(a < b) // true
+console.log(a >= b) // false
+console.log(a <= b) // true
+
+3 ) ------------ Logicals Operaters 
+
+let a = 10;
+let b = 20;
+
+console.log(a < b && a != b) // true
+console.log(a < b || a == b) // true
+console.log(!a < b) // false
+
+*/
+
+/* 
+----------------------------------------------------------------
+---------------------- Comments --------------------------------
+----------------------------------------------------------------
+
+In javascript there are two types of comments .
+
+1 ) single line comment .  symbol ( // )
+1 ) multi line comment .  symbol  ( /* ) 
+
+*/
+
+/* 
+----------------------------------------------------------------
+---------------------- Conditional Statments -------------------
+----------------------------------------------------------------
+
+Sometime we might have to excute block of code based off some condions .
+
+
+In javascript we have three forms of if else Statment .
+
+1 ) if Statment 
+2 ) if ... else Statment
+3 ) if else if else Statment
+
+
+------------------------ Syntax 
+
+Key
+               
+|
+|   Condition
+|       |
+if  ( a > 10 )  {  --- Body 
+
+  Statment
+
+}
+
+
+1 ) ------------------------ If Statment .
+
+If the condition is true the staments can run otherwise the else can run .
+
+
+-- Exp
+
+let name = prompt('Enter your name ?')
+
+if (name === "haider") {
+  console.log('The name is same')
+}
+
+
+2 ) ------------------------ If Else Statment .
+
+If the condition is not true the staments can't run the else can run .
+
+--- Exp
+
+let name = prompt('Enter your name ?')
+
+if (name === "haider") {
+  console.log('The name is same')
+}else {
+  console.log("The name can't be same");
+}
+
+
+3 ) ----------------------- Else if Statment .
+
+If the condition is not true the else if can run otherwise the else can run .
+
+--- Exp
+
+let name = prompt('Enter your name ?')
+
+if(name == 'haider'){
+  console.log('The name is same');
+}else if (name == 'hassan'){
+  console.log('The name is other');
+}else {
+  console.log('The name is not same');
+}
+
+
+*/
+
+/* 
+----------------------------------------------------------------
+---------------------- Switch Case Expression ------------------
+----------------------------------------------------------------
+
+
+--- Exp
+
+let age = prompt("Enter your age ? ");
+age = Number.parseInt(age);
+
+switch (age) {
+  case '10':
+    console.log("Your age is gretter then 10");
+  case '20':
+    console.log("Your age is gretter less then 20");
+  case '30':
+    console.log("Your age is gretter then 20");
+  default:
+    console.log("Your age is less then 10");
+}
+
+*/
+
+/* 
+----------------------------------------------------------------
+---------------------- Loops -----------------------------------
+----------------------------------------------------------------
+
+Loops are handy, if you want to run the same code over and over again, each time with a different value.
+
+
+In js there are four types of loops .
+
+1 ) For Loop .
+2 ) While Loop .
+3 ) Do While Loop .
+4 ) For In Loop .
+5 ) For Of Loop .
+
+
+1 ) -------------------------------- For loop
+
+A for loop repeats until a specified condition evaluates to false.
+
+--- Syntax
+
+for ( intilization ; condition ; incriment / decrimant ) {
+  // code to be executed 
+}
+
+--- Exp
+
+for(i = 0 ; i <= 5 ; i++){
+  console.log(i)
+}
+
+Output 
+
+1
+2
+3
+4
+5
+
+
+2 ) Sum ther numbers 
+
+2 ) let mul = 0;
+let fac = prompt("Enter the sum Number : ");
+fac = Number.parseInt(fac)
+
+for (i = 0; i < fac; i++) {
+  mul -= (i + 1);
+}
+
+console.log(mul);
+
+
+3 ) Find the highest number into array 
+
+let numbers = [1 , 10 , 20 , 22 , 43 , 5 , 40 , 89 , 56 , 33 , 23 , 44 , 56]
+
+let emp = 0;
+for(i = 0 ; i < numbers.length ; i++ ){
+    if(numbers[i] >  emp){
+        emp = numbers[i];
+    }
+}
+console.log(emp);  // 89
+
+
+4 ) Print the tree of this  
+
+*
+**
+***
+****
+*****
+
+for (let i = 1; i <= 5; i++) {
+    console.log("*".repeat(i));
+  }
+
+2 ) -------------------------------- For In Loop
+
+The for...in statements combo iterates (loops) over the properties of an object.
+
+---- Exp
+
+let obj = {
+    haider : 'haider',
+    ali : 'ali',
+    age : 18,
+    color : 'red'
+}
+
+for(key in obj) {
+    console.log(key + " " + "are" + " " + obj[key]);
+}
+
+key is print the key and obj[key] is print the value .
+
+
+3 ) -------------------------------- For of Loop
+
+The for...of statements combo iterates (loops) over the values of an array.   
+
+--- Exp
+
+let array = ['hdier' , 'chando' , 'moshin' , 'mahtab']
+
+for(a of array) {
+    console.log(a);
+}
+
+
+4 ) ------------------------------ While Loop 
+
+The while loop is used to execute a block of code as long as a specified condition is true.
+
+--- Exp
+
+
+let array = ['hdier' , 'chando' , 'moshin' , 'mahtab']
+
+let i = 0;
+while (i < array.length) {
+    console.log(array[i]);
+    i++;
+}
+
+
+5 ) ------------------------------ Do While Loop
+
+The do...while loop is used to execute a block of code as long as a specified condition is
+true. The code inside the loop will always be executed at least once.
+
+---- Exp
+
+let n = prompt(Number('Enter The Number : '));
+
+let i = 10;
+
+do{
+    console.log(i);
+    i++;
+}while(i < n)
+
+
+ */
+
+/* 
+----------------------------------------------------------------
+---------------------- Functions -------------------------------
+----------------------------------------------------------------
+
+A Functions is a block of code assigned to program a particular task .
+
+---- Syntax
+
+Key
+|    (Function Name) 
+|         |
+function Name() {
+
+code to be executed
+
+}
+
+
+---- Exp 
+
+1 ) A simple function to return the Name 
+
+function Name(){
+    return "John";
+}
+
+console.log(Name())
+
+
+2 ) Sum the values
+
+let sum = (a, b, c) => {let str = "haider";
+let rev = str.split("").reverse().join("");
+console.log(rev);
+
+  return a + b + c;
+};
+
+let a = 10;
+let b = 20;
+let c = 30;
+
+console.log(sum(a, b, c));
+
+*/
+
+/* 
+----------------------------------------------------------------
+---------------------- Arrays ----------------------------------
+----------------------------------------------------------------
+
+Array is a collection of value . store one two more value in one name .
+
+--- Syntax 
+
+let array = [ 1 , 3 , 'haider' , 78 , 88 , 33 , 44 , 8 , false  ]
+
+
+1 ) Accesing Values 
+
+let number = [ 1 , 3 , 5 , 6 ]
+
+console.log(number[0]) // 1
+console.log(number[1]) // 3
+
+
+2 ) Finding the length 
+
+let number = [ 1 , 3 , 5 , 6 ]
+
+console.log(number.length)
+
+
+
+------------------------ Array Methods  
+
+1 ) toString is convert array into the string .
+
+--- Exp
+
+let n = [1 , 2 , 3 , 4 , 5]
+
+let a = n.toString()
+
+console.log(a)
+
+
+2 ) join() all the array elements using a speator .
+
+--- Exp
+
+let n = [1 , 2 , 3 , 4 , 5]
+
+let a = n.join("-")
+
+console.log(a) // 1-2-3-4-5
+
+
+3 ) pop is remove the last elements in array .
+
+--- Exp
+
+let n = [1 , 2 , 3 , 4 , 5]
+
+console.log(n.pop())
+console.log(n) // [ 1, 2, 3, 4]
+
+
+4 ) push is add the element in end of array .
+
+--- Exp 
+
+let n = [1 , 2 , 3 , 4 , 5]
+console.log(n.push(6))
+console.log(n) // [ 1, 2, 3, 4, 5, 6 ]
+
+
+4 ) shif() is used remove the first element is array .
+
+--- Exp
+
+let n = [1 , 2 , 3 , 4 , 5]
+
+console.log(n.shift())
+console.log(n) //  [ 2, 3, 4, 5 ]
+
+
+5 ) UnShift() is used add the first element in the array .
+
+--- Exp 
+
+let n = [1 , 2 , 3 , 4 , 5]
+
+console.log(n.unshift(3))
+console.log(n) // [ 3, 1, 2, 3, 4, 5 ]
+
+
+6 ) concat() is used to concat one array into another array .
+
+--- Exp
+
+let n = [1 , 2 , 3 , 4 , 5]
+let n2 = [6 , 7 , 8 , 9 , 10]
+let n3 = n.concat(n2)
+
+console.log(n3) //  [ 1 , 2 , 3 , 4  , 5 , 6 , 7 , 8 , 9 , 10 ]
+
+
+7 ) splice() method adds new items to an array.
+
+--- Exp
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+
+console.log(fruits) // [ 'Banana', 'Orange', 'Lemon', 'Kiwi', 'Apple', 'Mango' ]
+
+
+8 ) The slice() method slices out a piece of an array into a new array.
+
+--- Exp
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1);
+console.log(citrus) // [ 'Orange', 'Lemon', 'Apple', 'Mango' ]
+
+
+9 ) sort() method is used to sort an array apptetically .
+
+--- Exp 
+
+let array = [ 9 , 6 , 7 , 5 , 3 , 2 , 99 , 66]
+let sort = array.sort();
+
+console.log(sort) // [ 2 , 3 , 5 , 6 , 66 , 7 , 9 , 99 ]
+
+
+------------------------------ Array Loops
+
+1 ) forEach loop return undefine .
+
+---- Syntax 
+
+array name.forEach( (value , index , array) {
+
+body of loop
+
+} )
+
+
+--- Exp 
+
+1 ) Print the number of array .
+
+let array = [ 9 , 6 , 7 , 5 , 3 , 2 , 99 , 66]
+
+array.forEach((elm) => {
+    console.log(elm)
+})
+
+
+2 ) Convert the array element into uppercase .
+
+let friend = ['haider' , 'mahtab' , 'hassan' , 'haziq' , 'fida']
+
+friend.forEach((elm) => {
+    console.log(elm.toLocaleUpperCase())
+})
+
+
+
+2 ) from() loop is used to string into the array .
+
+--- Exp
+
+let name = 'haider';
+
+let convertString = Array.from(name);
+
+console.log(convertString)   
+
+
+3 ) map() creates a new array from calling a function for every array element .
+
+--- Exp 
+
+let array = ['haider' , 'mahtab' , 'toqeer' , 'aoon']
+
+newarray = array.map((value) => {
+    console.log(value)
+    return value.toLocaleUpperCase();
+})
+
+console.log(newarray);
+
+
+4 ) filter mehtod is used to filter this array element .
+
+--- Exp
+
+Find the length of array element greater then one and less then four 
+
+const len = ['haider' , 'hh' , 'array' , 'string' , 'mahtab'];
+
+let len2 = len.filter((val , index) => {
+  let len3 = val.length;
+   ind = index;
+  return len3 > 1 && len3 < 4;
+})
+
+console.log(len); // ['haider' , 'hh' , 'array' , 'string' , 'mahtab']
+console.log(len2 , ind) // hh index of this element 4
+
+
+5 ) Reduce method return a value .
+
+--- Exp
+
+Sum of the all values in array using reduce mehtod.
+
+const len = [55, 44, 55, 23, 44, 23];
+
+let sum_func = len.reduce((val1, val2) => {
+  return val1 + val2;
+});
+
+console.log(sum_func);
+
+
+*/
+
+/* 
+----------------------------------------------------------------
+---------------------- Console object --------------------------
+----------------------------------------------------------------
+
+Console is used print a message .
+
+1 ) console.log('haider');
+2 ) console.error('This is an error'); // To print the error .
+3 ) console.assert(5 = 5) // using to condition .
+4 ) console.clear() // clear the console .
+5 ) console.count() // count the number of times the console.log() has been called .
+5 ) console.table() //  Display a formular table .
+6 ) console.warn() // used for warning .
+
+
+*/
+
+/* 
+----------------------------------------------------------------
+---------------------- BOM & DOM -------------------------------
+----------------------------------------------------------------
+
+1 ) ----------------- DOM (Document Object Model )
+
+dom represents the page content as Html .
+
+document.body  -- page body as js object .
+
+document.body.style.background = "black"
+
+
+2 ) ----------------- BOM (Browser Object Model )
+
+It is a collection of objects that allow JavaScript to interact with the browser.
+The BOM provides a way for JavaScript to access and manipulate the browser's window,
+and its components, and even control how the page behaves.
+
+The function alert / confirm / prompt are also a part of the BOM .
+
+  location.href = "https://codewithnaqvi.com"
+                              |
+                              |---- >  Redirect to another url
+
+
+
+-------------------------- How to acces the child 
+
+1 ) document.body.firstchild
+2 ) document.body.lastchild
+3 ) document.body.children[0]
+
+
+-------------------------- Parent & Sibling
+
+
+
+
+                              */
+
+/*
+----------------------------------------------------------------
+---------------------- Checked ---------------------------------
+----------------------------------------------------------------
+
+checked property is used to check the the input type radio and checkbox is checked or not checked.
+
+*/
+
+/* 
+----------------------------------------------------------------
+---------------------- Break and continue ----------------------
+----------------------------------------------------------------
+
+Break stament is used to break the loop interation .
+Continue statment is used to continue this loop .
+
+
+------------ Break 
+
+for (let i = 1 ; i <= 10 ; i+= 1){
+    if(i == 6){
+        break
+    }
+   document.writeln(i)
+}
+
+
+------------ Continue
+
+
+for (let i = 1 ; i <= 10 ; i+= 1){
+    if(i == 6){
+        continue
+    }
+   document.writeln(i)
+}
+
+*/
+
+/* 
+----------------------------------------------------------------
+---------------------- Nested loop -----------------------------
+----------------------------------------------------------------
+
+Nested loop the first loop is used to print the rows and second loop is used to print 
+the columns .
+
+-------- Exp
+
+for(let i = 1 ; i <= 5 ; i +=1){
+    for(let j = 1 ; j <= i ; j += 1){
+        document.writeln(j)
+    }
+}
+
+
+*/
+
+/* 
+----------------------------------------------------------------
+---------------------- Call function ---------------------------
+----------------------------------------------------------------
+
+Callback is a function that is passsed as an argument into the another functoin .
+
+
+--- Exp
+
+
+let array = ['haider' , 'massom' , 'Qammar' , 'hijab'];
+
+ 
+const newarray = array.map(convertupper);
+
+function convertupper(elm){
+  return elm.toUpperCase();
+}
+
+console.log(newarray)
+
+
+*/
+
+/*
+
+
+----------------------------------------------------------------
+---------------------- Inheritance -----------------------------
+----------------------------------------------------------------
+
+allow a new class to inherit properties and methods from an exsiting 
+class (parent -> child ) helps with code 
+
+
+class Human {
+  alive = true;
+
+  eat() {
+    console.log(`This ${this.name} is eating`);
+  }
+
+  sleep() {
+    console.log(`${this.name} is a sleeping mood`);
+  }
+}
+
+class Mahtab extends Human {
+  name = "Mahtab";
+}
+
+const mahtab = new Mahtab();
+mahtab.eat();
+mahtab.sleep();
+
+*/
+
+/* 
+
+----------------------------------------------------------------
+---------------------- Destructuring ---------------------------
+----------------------------------------------------------------
+
+
+Destructuring in JavaScript is a feature that allows to extract values from arrays or objects and assign
+them to distinct variables. It provides a concise way to unpack values from data structures, 
+
+
+--- Array Example
+
+let array = ['haider' , 'massom' , 'Qammar' , 'hijab'];Create
+
+
+ 
+const [first , second  , third ] = array;
+
+console.log(first)
+
+
+*/
+
+/* 
+
+----------------------------------------------------------------
+---------------------- Set time out ----------------------------
+----------------------------------------------------------------
+
+ The setTimeout() method calls a function after a number of milliseconds. 1 second = 1000 milliseconds.
+
+ ---- Exp
+
+ setTimeout(() => {
+  console.log('haider')
+  
+}, 3000);
+
+
+*/
+
+/* 
+
+----------------------------------------------------------------
+---------------------- Set Interval ----------------------------
+----------------------------------------------------------------
+
+The setInterval() method calls a function at specified intervals (in milliseconds). The setInterval() method continues calling 
+the function until clearInterval .
+
+ ---- Exp
+
+ setTimeout(() => {
+  console.log('haider')
+  
+}, 3000);
+
+
+let count = 0;
+const intervalId = setInterval(() => {
+  console.log(++count);
+  if (count === 100) clearInterval(intervalId); // stops after 5 times
+}, 1000);
+
+
+
+*/
+
+/* 
+
+----------------------------------------------------------------
+----------------- Asynchronous  vs Synchronous -----------------
+----------------------------------------------------------------
+
+
+Synchronous code run line by line like js . 
+
+----Exp
+
+let a = 10;
+let b = 20;
+let c = 30;
+
+console.log(a)
+console.log(b)
+console.log(c)
+
+
+Asynchronous code can't be run line by line .
+
+--- Exp
+
+let a = 10;
+let b = 20;
+let c = 30;
+
+console.log(a);
+
+const run = setTimeout(() => {
+  console.log(b);
+}, 1000);
+
+
+console.log(c);
+
+
+*/
+
+/* 
+----------------------------------------------------------------
+----------------- Try & Catch ---------------------------------
+----------------------------------------------------------------
+
+The try statement defines a code block to run (to try).
+
+--- Synatax
+
+try {
+  console.log(b)
+}
+
+The catch statement defines a block of code to run if an error occurs.
+
+--- Syntax 
+
+catch(err) {
+  console.log(err)
+}
+
+
+--------------------------- Combine example 
+
+console.log('haider')
+
+try {
+  console.log(b)
+}
+catch(err) {
+  console.log(err)
+}
+
+console.log('hassan')
+
+
+-------------- name
+
+name is show the error name 
+
+------------- message
+
+message can show the message the error can through
+
+
+
+*/
+
+/* 
+----------------------------------------------------------------
+------------------------ Promises ------------------------------
+----------------------------------------------------------------
+
+A Promise is like a guarantee that you will get a result in the future — either a success or a failure.
+
+---- Example
+
+let promise = new Promise((resolve, reject) => {
+  let success = true;
+
+  if (success) {
+    resolve("It worked!");
+  } else {
+    reject("It failed!");
+  }
+});
+
+promise
+  .then(result => console.log(result))     // Runs if resolved
+  .catch(error => console.log(error));     // Runs if rejected
+
+
+
+*/
+
+/* 
+----------------------------------------------------------------
+------------------------ Local Storage -------------------------
+----------------------------------------------------------------
+
+Local Storage is a built-in browser storage used to store data permanently on the user’s browser.
+
+five important function into local storage
+
+
+
+1. ---------- setItem(key, value)
+
+👉 Store data into localStorage.
+
+localStorage.setItem("username", "Ali");
+
+✔ Saves "Ali" under the key "username".
+
+
+2. ----------- getItem(key)
+
+👉 Access (get) the stored data.
+
+localStorage.getItem("username");
+
+✔ Returns "Ali".
+
+
+3. ---------- removeItem(key)
+
+👉 Delete a specific value from localStorage.
+
+localStorage.removeItem("username");
+
+✔ Removes only "username".
+
+
+4. --------- clear()
+
+👉 Delete ALL data from localStorage.
+
+localStorage.clear();
+
+✔ Removes everything (use with caution).
+
+
+5 --------- key(index)
+
+👉 Get the key name using an index number.
+
+localStorage.key(0);
+
+✔ Returns the first stored key.
+
+
+6. --------- localStorage.length
+
+👉 Tells how many items are stored.
+
+console.log(localStorage.length);
+
+
+*/

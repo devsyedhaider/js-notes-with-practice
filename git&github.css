@@ -1,0 +1,440 @@
+/* ---------------- What is git 
+
+Git is version control system it helps you save different versions of your code, track changes, and work with multiple developers easily.
+
+*/
+
+/* --------------- What is github 
+
+Github is a web-based platform that provides hosting for git repositories .
+Github help you collaboration into teams members.
+
+
+
+
+*/
+
+/* -------------- How to see hide files in git 
+
+See hidens files into our repositry using this command .
+
+--- Command : 
+             git -a
+
+
+*/
+
+/* -----------------  Configure git
+
+1 - git config -- gloabal.user.name is used to change the user name into gihub .
+
+1 - git config -- gloabal.user.email is used to change the user email into gihub .
+
+3 - git --list  is used to check the data of user 
+
+ */
+
+/* ---------------- Git Clone 
+
+Cloning a repositry into github in our local machine .
+
+--- Command 
+
+Git clone 
+
+---- Working flow exapmle
+
+Open the gihub repositry and click the code btn and copy the ( HTTPS ) link 
+and paste into our terminal and get the same repositry into device .
+
+
+*/
+
+/* ------------ Git Status
+
+Git status is used to check the current state of my code if 
+your code is same like github code he will show the msg your
+branch is up to date with out branch name 
+
+else you will change something our code he will msg for you like this .
+
+example --- I will add a index,html file 
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+
+------------- Type of Status in git
+
+There are four type of git status 
+
+1 ) ---- Untrack
+
+new files that git dosen't yet track , if you have to files first readme and second index.html you 
+we commit the readme file but you will not commit the index.html file you will any change into boths file 
+and we run the command ( git Status ) they will show the readme file is updated and orther one like index.html 
+file is Untraked file because you will never commit on this html file .
+
+2 ) ----- Modified 
+
+You will change any thing in this file they will show you your file is modified .
+
+
+3 ) ----- Staged
+
+selected changes that are ready to be saved in the next Git commit.
+
+Imagine you changed 3 files:
+
+home.html
+
+style.css
+
+app.js
+
+But you only want to save home.html and style.css.
+
+You do:
+
+git add home.html
+git add style.css
+git commit -m "Updated homepage UI"
+
+
+4 ) ------ Unmodified 
+
+You will not change in boths files .
+
+*/
+
+/*  ------------------ Git Add
+
+git add is a command that moves your changed files into the staging area so they are ready to be saved in your next commit.
+
+git add means “Select these files to save.”
+git add moves your files from → Working Directory → Staging Area
+
+----- 🎯 Why do we use git add?
+
+Because Git does NOT save your files automatically.
+
+
+------------------ 🧩 Example (Very Easy)
+
+Imagine you changed two files:
+
+1 ) --- home.html
+
+2 ) --- style.css
+
+Now you want to save only home.html.
+
+So you do:
+
+( git add home.html )
+
+--------------- 🟢 Common git add commands
+
+➤ 1. Add one file
+git add index.html
+
+➤ 2. Add all files
+git add .
+
+➤ 3. Add a specific folder
+git add src/
+
+➤ 4. Add specific file types
+git add *.css
+
+
+
+--------------------- Un Staged add file 
+
+You will unstaged the specific file use this command .
+
+----- Command. 
+
+git rm --cached <file> file name
+
+*/
+
+/* 
+
+----------------------- Git commit 
+
+Commit the staged changes with a message
+
+git commit -m "Your commit message"
+
+You will check the lastest commands on the your team mate in our project .
+
+
+*/
+
+/*
+
+---------------------- Git Branch 
+
+Git branch is used to separate code work so multiple developers can work without disturbing each other.
+
+
+Step 1: Create branch
+git branch feature-navbar
+
+Step 2: Switch to your new branch
+git checkout feature-navbar
+
+----------- 🧠 Useful git branch commands
+
+✔ 1. Show all branches
+git branch
+
+✔ 2. Create a new branch
+git branch branchName
+
+✔ 3. Switch to a branch
+git checkout branchName
+
+✔ 4. Create and switch together
+git checkout -b branchName
+
+✔ 5. Delete a branch
+git branch -d branchName
+
+✔ 6. Rename a branch
+git branch -m oldName newName
+
+✔ 6. Merge a branch
+git merge branch name 
+
+*/
+
+/* 
+
+---------------------- Git checkout
+
+It is used to switch between branches or restore files.
+
+Command	What it does
+
+git checkout main	              -----------           Switch to main branch
+git checkout navbar             -----------	          Switch to navbar branch
+git checkout -c login	          -----------           Create and switch to login branch
+git checkout main -- file.txt   -----------     	    Restore file from another branch
+
+
+*/
+
+/* ---------------------- Git amend 
+
+git amend is use to change the latest commit and add new files .
+
+
+----- Command 
+
+git commit --amend -m "New Commit message"
+
+
+Command	Use
+
+git commit --amend                      --        Edit last commit message or add forgotten files
+git commit --amend -m "new message"     --      	Change commit message only
+git add file + git commit --amend	      --        Add files to previous commit
+
+
+*/
+
+/* ----------------------------- Git Ignore 
+
+These files should NOT be tracked or pushed to GitHub.
+
+But NO — Git tracks .gitignore normally.
+
+Only the files INSIDE it are ignored.
+
+
+
+------------ 🧪 Example in Simple Words
+
+Imagine you have a school bag
+Inside you keep your books, but you don’t want to include:
+
+Food
+
+Dirty papers
+
+Waste items
+
+So you tell someone:
+
+“Don’t put these items in my bag!”
+
+.gitignore does the same job for Git.
+
+
+
+-------------------- Use of ignore git file 
+
+🔧 How to create .gitignore
+
+Create file:
+touch .gitignore
+
+
+Add things you want to ignore:
+node_modules/
+*.log
+
+
+Save and commit:
+git add .gitignore
+git commit -m "Added gitignore"
+
+
+--------------------- Feature	Explanation 
+
+.gitignore              -----    	Tells Git to ignore certain files
+Purpose	                -----     Avoid pushing unwanted files
+Common ignores	        -----     node_modules, .env, logs
+Already tracked?	      -----     Use git rm --cached
+
+
+*/
+
+/* ----------------------------- Git stash 
+
+
+git stash is a Git command used to save your uncommitted changes temporarily without committing them.
+
+
+
+1️⃣ You want to switch branches but your code is not completed
+
+-------------- Example:
+
+You are working on navbar in the navbar branch.
+Suddenly your boss says:
+
+“Checkout the main branch quickly!”
+
+But you have uncommitted code.
+Git won't let you switch:
+
+error: Your local changes would be overwritten
+
+Solution:
+
+git stash
+git checkout main
+
+
+Your work is saved safely.
+
+
+------------------------------ ✔️ Basic Commands
+👉 Save your unfinished work
+git stash
+
+
+This hides all modified files and cleans your directory.
+
+👉 Show list of stashes
+
+git stash list
+it use to see stash files 
+
+
+git stash pop :
+Is used to restore the stash code 
+
+
+git stash apply :
+Is used to apply the lastest stash commit
+
+
+git stash clear :
+Is used to clear a stash list 
+
+
+git stash --file name :
+Is used to you have many files but you want stash only one file use this command .
+
+
+git stash show stash[id] : 
+Is used to show the stash changes on this file .
+
+
+git stash show -p stash[id] :
+If you want to see the stash code inside change use this command
+
+
+git stash --keep-index
+It used to unstashed only untracket staged code .
+
+
+git stash --include-untracked :
+It's command is used to un-tracked file to stash.
+
+*/
+
+/* ------------------------------ Git Restore 
+
+git restore is used to undo changes in your files before committing.
+
+
+1 ) git restore (file name) :
+Git restore (file name) command is used to discard the latest changes .
+
+
+2 ) git restore --staged file name :
+Git restore --staged (style.css || file name) command in used to unstaged to unstaged file .
+
+
+3 ) git restore . :
+Git restore . command is used to dicard all changes into all file recent we will change . 
+
+
+4 ) git restore --source :
+git restore --source is used to restore a file or folder from a specific commit.
+
+
+*/
+
+/* ------------------------------ Git Reset 
+
+It is used to undo commits in different ways.
+
+1 ) Git reset :
+Git reset is used to staged file into unstaged file .
+
+
+2 ) git reset --sorf HEAD~1 :
+You commited something , but there's a mistake and you want to make changes before commiting again .
+# undo last commit but change keep changes
+
+
+3 ) git reset  --mixed HEAD~1 :
+undo the last commit and unstaged changes and move our code into working directly area .
+
+
+4 ) git reset --hard <commit-hash>
+Reset to a specific commit , discarding all changes .
+
+
+*/
+
+/* 
+
+---------------------------------- Git Rebase Kya Hota Hai?
+
+Git rebase ek command hai jo aapki current branch ko kisi dusri branch ke latest changes ke upar re-write kar deta hai.
+
+Iska matlab:
+
+✔ History clean ho jati hai
+✔ Merge commits avoid ho jate hain
+✔ Aapki branch lagti hai jaise seedhi ek line me bani ho
+
+*/
