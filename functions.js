@@ -42,7 +42,7 @@ let EvenOdd = (num) => {
   }
 };
 
-EvenOdd(7);
+EvenOdd(10);
 
 // Write a function to find the maximum of 3 numbers.
 
@@ -91,3 +91,47 @@ function sumarray(arr) {
 }
 
 console.log(sumarray([10, 3, 6, 11]));
+
+// IIFE function
+
+(function (a, b) {
+  return console.log(a + b);
+})(10, 20);
+
+// Anonimas
+
+let arr = function () {
+  console.log("hahider");
+};
+
+arr();
+
+// function declartion
+
+function ad(num1, num2) {
+  return console.log(num1 + num2);
+}
+ad(10, 21);
+
+// function epression & annonimus function
+
+let sum = function (num1, num2) {
+  return console.log(num1 + num2);
+};
+sum(122, 333);
+
+// Arrow function
+
+let mul = (num, num1) => {
+  return console.log(num * num1);
+};
+
+mul(20, 20);
+
+// Function invoked
+
+(function () {
+  console.log("haider");
+})();
+
+// function call back

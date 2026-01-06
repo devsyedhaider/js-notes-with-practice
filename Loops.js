@@ -58,7 +58,7 @@ Print the tree
 *****
 
 for (i = 1; i <= 5; i++) {
-  console.log(i.repeat(i));
+  console.log('*'.repeat(i));
 }
 
 */

@@ -462,6 +462,49 @@ console.log(!a < b) // false
 
 */
 
+/*
+
+----------------------------------------------------------------
+---------------------- Spread Operaters ------------------------
+----------------------------------------------------------------
+
+Spread operator array ya object ke andar mojood values ko expand / phaila deta hai, yani unhein alag alag kar deta hai.
+
+------------- Example 
+
+let user = { name: "Ali", age: 22 };
+let newUser = { ...user };
+
+Is mein user object ki saari properties newUser mein aa gayi.
+
+
+------------  Example 1: Array copy
+
+let arr1 = [1, 2, 3];
+let arr2 = [...arr1];
+
+console.log(arr2); // [1, 2, 3]
+
+------------- 📦 Example 2: Array merge
+
+let a = [1, 2];
+let b = [3, 4];
+
+let merge = [...a, ...b];
+console.log(merge); // [1,2,3,4]
+
+
+-------------- 📦 Example 3: New value add karna
+
+let nums = [10, 20, 30];
+let updated = [...nums, 40];
+
+console.log(updated);
+
+z
+
+*/
+
 /* 
 ----------------------------------------------------------------
 ---------------------- Comments --------------------------------
@@ -742,31 +785,106 @@ code to be executed
 }
 
 
----- Exp 
+------------------------- 📌 Types of Functions — Definitions
 
-1 ) A simple function to return the Name 
+1️⃣ Function Declaration
 
-function Name(){
-    return "John";
+👉 A function with a name, declared using function.
+
+function add(a, b) {
+  return a + b;
 }
 
-console.log(Name())
 
+2️⃣ Function Expression
 
-2 ) Sum the values
+👉 A function stored inside a variable.
 
-let sum = (a, b, c) => {let str = "haider";
-let rev = str.split("").reverse().join("");
-console.log(rev);
-
-  return a + b + c;
+const sub = function(a, b) {
+  return a - b;
 };
 
-let a = 10;
-let b = 20;
-let c = 30;
 
-console.log(sum(a, b, c));
+3️⃣ Arrow Function
+
+👉 Shorter syntax for writing functions.
+
+const multiply = (a, b) => a * b;
+
+
+4️⃣ Anonymous Function ⭐ (DETAILED)
+
+👉 A function without a name is called an Anonymous Function.
+
+const greet = function () {
+  console.log("Hello");
+};
+
+
+⛔ No function name after function
+
+Used where?
+
+✔ Inside setTimeout
+✔ Inside addEventListener
+✔ As a callback
+
+setTimeout(function () {
+  console.log("Executed after 2 seconds");
+}, 2000);
+
+🧠 Why use?
+Because sometimes we need a function only once, so no name needed.
+
+
+5️⃣ Immediately Invoked Function Expression (IIFE) ⭐ (DETAILED)
+
+👉 A function that runs immediately after it is created.
+
+Syntax:
+
+(function () {
+  console.log("IIFE executed");
+})();
+
+How it works?
+
+(function(){}) → function expression
+
+() → immediately calls it
+
+Example:
+
+(function (a, b) {
+  console.log(a + b);
+})(5, 3);
+
+Why use IIFE?
+
+✔ Avoid variable conflicts
+✔ Protect data
+✔ Run code once
+
+🧠 Mostly used in old JS and module patterns
+
+
+
+6️⃣ Callback Function ⭐ (DETAILED)
+
+👉 A function passed as an argument to another function and executed later.
+
+Real Example:
+
+setTimeout(function () {
+  console.log("Done");
+}, 1000);
+
+Array Example:
+
+[1, 2, 3].forEach(function (num) {
+  console.log(num);
+});
+
 
 */
 
@@ -995,6 +1113,101 @@ console.log(sum_func);
 
 */
 
+/*
+
+----------------------------------------------------------------
+---------------------- Objects ---------------------------------
+----------------------------------------------------------------
+
+An object stores data in key–value pairs.
+
+
+---------- Example
+
+let person = {
+  name: "Ali",
+  age: 22,
+  city: "Lahore"
+};
+
+
+------------------ Acces keys
+
+Object.keys(person); // ["name","age","city"]
+
+------------------ Acces Value
+
+Object.values(person); // Ali , 22 , Lahore
+
+------------------ Object.entries()
+
+Object.entries(person);
+// [["name","Ali"],["age",23]]
+
+
+----------------- Accessing Object Data
+
+console.log(person.name); // Ali
+console.log(person["age"]); // 22
+
+
+----------------- Object with Methods (Functions inside object)
+
+let user = {
+  name: "Ahmed",
+  greet: function () {
+    console.log("Hello Ahmed");
+  }
+};
+
+user.greet();
+
+
+------------------ this Keyword (VERY IMPORTANT)
+
+let user = {
+  name: "Ali",
+  sayName() {
+    console.log(this.name);
+  }
+};
+
+user.sayName(); // Ali
+
+
+------------------- Nested Objects
+
+let student = {
+  name: "Usman",
+  marks: {
+    math: 80,
+    english: 70
+  }
+};
+
+console.log(student.marks.math); // 80
+
+
+----------------- 🛒 Shopping Cart Object
+
+let cart = {
+  items: [
+    { name: "Mobile", price: 50000, qty: 1 }
+  ],
+
+  total() {
+    return this.items.reduce((sum, item) => {
+      return sum + item.price * item.qty;
+    }, 0);
+  }
+};
+
+console.log(cart.total());
+
+
+
+*/
+
 /* 
 ----------------------------------------------------------------
 ---------------------- Console object --------------------------
@@ -1050,17 +1263,14 @@ The function alert / confirm / prompt are also a part of the BOM .
 
 -------------------------- Parent & Sibling
 
-
-
-
-                              */
+*/
 
 /*
 ----------------------------------------------------------------
 ---------------------- Checked ---------------------------------
 ----------------------------------------------------------------
 
-checked property is used to check the the input type radio and checkbox is checked or not checked.
+checked property is used to check the input type radio and checkbox is checked or not checked.
 
 */
 
@@ -1187,12 +1397,25 @@ them to distinct variables. It provides a concise way to unpack values from data
 
 let array = ['haider' , 'massom' , 'Qammar' , 'hijab'];Create
 
-
- 
 const [first , second  , third ] = array;
 
 console.log(first)
 
+-----------
+
+const vehicles = ['mustang', 'f-150', 'expedition'];
+const [car, truck, suv] = vehicles;
+
+console.log(car); // Output: mustang
+
+
+-------
+
+let guest = 'Jane';
+let admin = 'Pete';
+
+[guest, admin] = [admin, guest]; 
+console.log(guest); // Output: Pete
 
 */
 
