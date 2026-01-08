@@ -1,35 +1,39 @@
-/*
+let input = document.getElementById("todoInput");
+let btn = document.getElementById("addBtn");
+let list = document.getElementById("todoList");
 
-🌐 What is DOM?
+// Add task function
+function addTask() {
+  if (input.value === "") {
+    alert("Task likho pehle!");
+    return;
+  }
 
-DOM (Document Object Model) is a tree structure of your HTML page that JavaScript can read, change, add, or delete.
+  let li = document.createElement("li");
+  li.innerText = input.value;
 
-👉 JavaScript uses DOM to:
+  let del = document.createElement("span");
+  del.innerText = "❌";
 
-Change text
+  li.appendChild(del);
+  list.appendChild(li);
 
-Change styles
+  input.value = "";
+}
 
-Handle clicks/events
+// Button click
+btn.addEventListener("click", addTask);
 
-Create/remove elements
+// Enter key support
+input.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    addTask();
+  }
+});
 
-Example:
-
-<h1 id="title">Hello</h1>
-
-
-JS can change it using DOM.
-
-🧠 DOM TREE (Basic Idea)
-document
- └── html
-     ├── head
-     └── body
-         └── h1
-
-
-document is the root object.
-
-
-*/
+// Delete task (Event Delegation)
+list.addEventListener("click", function (e) {
+  if (e.target.tagName === "SPAN") {
+    e.target.parentElement.remove();
+  }
+});

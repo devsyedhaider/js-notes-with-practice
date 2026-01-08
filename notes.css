@@ -1226,45 +1226,6 @@ Console is used print a message .
 
 */
 
-/* 
-----------------------------------------------------------------
----------------------- BOM & DOM -------------------------------
-----------------------------------------------------------------
-
-1 ) ----------------- DOM (Document Object Model )
-
-dom represents the page content as Html .
-
-document.body  -- page body as js object .
-
-document.body.style.background = "black"
-
-
-2 ) ----------------- BOM (Browser Object Model )
-
-It is a collection of objects that allow JavaScript to interact with the browser.
-The BOM provides a way for JavaScript to access and manipulate the browser's window,
-and its components, and even control how the page behaves.
-
-The function alert / confirm / prompt are also a part of the BOM .
-
-  location.href = "https://codewithnaqvi.com"
-                              |
-                              |---- >  Redirect to another url
-
-
-
--------------------------- How to acces the child 
-
-1 ) document.body.firstchild
-2 ) document.body.lastchild
-3 ) document.body.children[0]
-
-
--------------------------- Parent & Sibling
-
-*/
-
 /*
 ----------------------------------------------------------------
 ---------------------- Checked ---------------------------------
@@ -1326,7 +1287,7 @@ for(let i = 1 ; i <= 5 ; i +=1){
 
 /* 
 ----------------------------------------------------------------
----------------------- Call function ---------------------------
+----------------- Callback function ----------------------------
 ----------------------------------------------------------------
 
 Callback is a function that is passsed as an argument into the another functoin .
@@ -1457,7 +1418,7 @@ the function until clearInterval .
 let count = 0;
 const intervalId = setInterval(() => {
   console.log(++count);
-  if (count === 100) clearInterval(intervalId); // stops after 5 times
+  if (count == 100) clearInterval(intervalId); // stops after 5 times
 }, 1000);
 
 
@@ -1547,6 +1508,329 @@ name is show the error name
 ------------- message
 
 message can show the message the error can through
+
+
+
+*/
+
+/*
+
+-----------------------------------------------------------------
+----------------------- 🌐 What is DOM ? ------------------------
+-----------------------------------------------------------------
+
+DOM (Document Object Model) is a tree structure of your HTML page that JavaScript can read, change, add, or delete.
+
+dom represents the page content as Html .
+
+
+👉 JavaScript uses DOM to:
+
+Change text
+
+Change styles
+
+Handle clicks/events
+
+Create/remove elements
+
+Example:
+
+<h1 id="title">Hello</h1>
+
+
+JS can change it using DOM.
+
+🧠 DOM TREE (Basic Idea)
+document
+ └── html
+     ├── head
+     └── body
+         └── h1
+
+
+document is the root object.
+
+
+-----------------------------------------------------------------
+----------------------- Element Selector ------------------------
+-----------------------------------------------------------------
+
+------------  What is Element Selector?
+
+Element selector means selecting HTML elements using JavaScript DOM methods.
+Method used to target and manipulate the HTMl elements They allows to selecet
+one or more HTML elements from the DOM (Document Object Model)
+
+Example HTML:
+
+<p>Hello</p>
+<p>World</p>
+
+
+------------------- Main Element Selectors in JavaScript
+
+HTMLCollection doesn’t support forEach because it’s a live, array-like object, not a real array.
+
+
+------------- 1️⃣ getElementById()
+
+IDs must be unique. JavaScript selects only the first matching ID.
+
+let el = document.getElementById("title");
+
+<h1 id="title">Hello</h1>
+
+
+
+------------- 2️⃣ getElementsByClassName()
+
+Selects multiple elements by class Name
+Returns HTMLCollection
+
+let items = document.getElementsByClassName("box");
+
+<div class="box"></div>
+<div class="box"></div>
+
+Access element:
+
+items[0].style.color = "red";
+
+
+
+------------ 3️⃣ getElementsByTagName()
+
+Selects elements by HTML tag
+Returns HTMLCollection
+
+let paras = document.getElementsByTagName("p");
+
+
+
+------------ 4️⃣ querySelector() ⭐ (Most used)
+
+Selects first matching element
+Uses CSS selector
+
+document.querySelector("p");        // tag
+document.querySelector(".box");     // class
+document.querySelector("#title");   // id
+
+
+
+------------ 5️⃣ querySelectorAll()
+
+Selects all matching elements
+Returns NodeList
+
+document.querySelectorAll(".box");
+
+Loop:
+
+document.querySelectorAll(".box").forEach(el => {
+  el.style.background = "yellow";
+});
+
+
+
+-----------------------------------------------------------------
+----------------------- DOM Style -------------------------------
+-----------------------------------------------------------------
+
+let element = document.querySelector('.box');
+
+🔹 Change Style
+
+element.style.color = "red";
+element.style.backgroundColor = "black";
+
+
+🔹 classList (🔥 VERY IMPORTANT)
+
+element.classList.add("active");  // Add class 
+element.classList.remove("active"); // Remove Class
+element.classList.toggle("active"); // Toggle class if class is active you will remove 
+element.classList.contains("active");
+
+
+✔ Best way to manage CSS classes
+
+
+-----------------------------------------------------------------
+----------------------- DOM CONTENT METHODS ---------------------
+-----------------------------------------------------------------
+
+
+--------------- 🔹 innerText
+
+
+
+
+
+
+-----------------------------------------------------------------
+----------------------- DOM Navigation --------------------------
+-----------------------------------------------------------------
+
+DOM Navigation means moving through the DOM tree to access parent, child, or sibling elements.
+
+Think of your HTML as a family tree:
+
+<div id="parent">
+  <p id="child1">Child 1</p>
+  <p id="child2">Child 2</p>
+</div>
+
+
+Here:
+
+div is the parent
+
+p elements are children
+
+child1 and child2 are siblings
+
+DOM Navigation allows you to go up, down, or sideways in this tree.
+
+
+-------------- 1️⃣ Access Parent
+
+Acces parent element by using dom navigation .
+
+let box = document.querySelector(".box1"); // Select the box 1 
+let boxparent = box.parentNode; // Acces the parent Element 
+
+console.log(boxparent); // div.parent
+
+
+--------------- 2️⃣ Access Children
+
+children → only element nodes (ignores text/comment nodes)
+Retrun a HTML Collections
+
+let parent = document.querySelector(".parent"); // Select the parent Element
+console.log(parent.children); // Access the Children Element All
+
+console.log(parent.children[0].style.color = 'red'); // Select the first children element .
+
+
+----------- Access the firstElementChild / lastElementChild
+
+console.log(parent.firstElementChild); // Fruit
+console.log(parent.lastElementChild);  // Vegetable
+
+
+----------------- 3️⃣ Access Siblings
+
+nextElementSibling / previousElementSibling
+
+let child1 = document.querySelector(".box1");
+console.log((child1.nextElementSibling.style.color = "red"));   // Access the next sibling like box2 and change the color
+console.log(child1.previousElementSibling);                     // null (no previous Sibiling)
+
+
+
+-----------------------------------------------------------------
+----------- DOM ADD Itme & Remove Item || Create Element --------
+-----------------------------------------------------------------
+
+----------------- 🔹 createElement
+
+CreateElement is used to create a element into an a body ...
+
+let ulele = document.querySelector("ul");    // Selecting ul list
+let liele = document.createElement("li");    // Create an li element
+liele.textContent = "haider";                // Add textContent into li recent we create
+ulele.append(liele);                         // Append li into parent ul list
+
+
+----------------- 🔹 Append 
+
+Append method is used to append the createElement into body .
+Gernerly any new element user append in body the will insert last Element into body .
+
+let liele = document.createElement("li");    // Create an li element
+liele.textContent = "haider";                // Add textContent into li recent we create
+ulele.append(liele);                         // Append li into parent ul list
+
+
+----------------- 🔹 Prepend 
+
+Prepend is used to append element into first the body like first element .
+Gernerly we use prepend the element show the first like first element into the body
+
+
+let liele = document.createElement("li");    // Create an li element
+liele.textContent = "haider";                // Add textContent into li recent we create
+ulele.append(liele);                         // Append li into parent ul list
+
+
+----------------- 🔹 insertBrfore
+
+Insert before is used to insert your element before which place you like in body .
+
+ulele.innsertBefore(newElement , currentElement);        
+
+
+----------------- 🔹 Remove 
+
+Remove is used to remove the element into body .
+
+let ulele = document.querySelector("ul");       // Selecting ul list
+let liele = document.createElement("li");       // Create an li element
+liele.textContent = "haider";                   // Add textContent into li recent we create
+ulele.append(liele);                            // Append the child into li
+liele.remove();                                 // Remove the li element
+
+
+
+-----------------------------------------------------------------
+--------------------- What is addEventListener ------------------
+-----------------------------------------------------------------
+
+addEventListener is a JavaScript method used to listen for an event (like click, typing, submit)
+on an element and run a function when that event happens.
+
+
+------------- 📌 Basic Syntax
+
+element.addEventListener("eventName", function () {
+  // code to run
+});
+
+
+-------- ✅ Example 1: Click Event
+
+let btn = document.querySelector("button");
+
+btn.addEventListener("click", function () {
+  alert("Button clicked!");
+});
+
+🧠 When user clicks the button → function runs
+
+
+------- ✅ Example 2: Input Event
+
+let input = document.querySelector("input");
+
+input.addEventListener("input", function (e) {
+  console.log(e.target.value);
+});
+
+🧠 Runs every time user types
+
+
+
+-------- ✅ Example 3: Form Submit
+
+let form = document.querySelector("form");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // stop page refresh
+  console.log("Form submitted");
+});
 
 
 
