@@ -1662,10 +1662,51 @@ element.classList.contains("active");
 -----------------------------------------------------------------
 
 
---------------- 🔹 innerText
+--------------- 🔹 1️⃣ innerHTML
+
+👉 HTML + text dono render karta hai
+
+let box = document.getElementById("box");
+box.innerHTML = "<b>Hello World</b>";
+
+✅ Bold render hoga
+⚠️ Risk: user input ho to XSS attack ka chance hota hai
+
+
+--------------- 🔹 2️⃣ innerText
+
+👉 Sirf visible text render karta hai
+box.innerText = "<b>Hello World</b>";
+
+📌 Output:
+<b>Hello World</b>
+
+❌ HTML render nahi hota
+✅ CSS display:none wale text ko ignore karta hai
 
 
 
+--------------- 🔹 3️⃣ textContent (🔥 MOST RECOMMENDED)
+
+👉 Sirf pure text render karta hai (fast & safe)
+box.textContent = "<b>Hello World</b>";
+
+📌 Output:
+<b>Hello World</b>
+
+✅ HTML ignore
+✅ Hidden text bhi include karta hai
+✅ Secure & fast
+
+
+
+--------------- 🔹 4️⃣ outerHTML
+
+👉 Element + uska content replace kar deta hai
+
+box.outerHTML = "<h1>Hello</h1>";
+
+📌 box element khud hi replace ho jata hai
 
 
 
@@ -1843,6 +1884,18 @@ form.addEventListener("submit", function (e) {
 
 A Promise is like a guarantee that you will get a result in the future — either a success or a failure.
 
+A Promise is an object that represents a value that will be available:
+later (success) or
+never (error)
+👉 Used for asynchronous work (time-taking tasks).
+
+
+🟡 Promise has 3 states
+
+1️⃣ Pending → waiting
+2️⃣ Fulfilled → success
+3️⃣ Rejected → failed
+
 ---- Example
 
 let promise = new Promise((resolve, reject) => {
@@ -1860,6 +1913,64 @@ promise
   .catch(error => console.log(error));     // Runs if rejected
 
 
+
+----------------------------------------------------------------
+----------------------- What is async  -------------------------
+----------------------------------------------------------------
+
+async makes a function always return a Promise
+
+
+-------------- Example 
+
+async function hello() {
+  return "Hello";
+}
+
+Even though it looks normal, it actually returns a Promise.
+
+hello().then(msg => console.log(msg));
+
+Output:
+       Hello
+
+📌 Remember:
+
+async = promise function
+
+
+
+----------------------------------------------------------------
+----------------------- What is await  -------------------------
+----------------------------------------------------------------
+
+await means “wait here until the promise finishes”
+
+⚠️ await can be used ONLY inside async function       
+
+
+function OrderFood() {
+  return new Promise((resolve, reject) => {
+    let resturantOpen = false;
+
+    if (resturantOpen) {
+      resolve("Resturant is Open");
+    } else {
+      reject("Resturant is Close");v n
+    }
+  });
+}
+
+async function order() {
+  try {
+    let food = await OrderFood();
+    console.log(food);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+order();
 
 */
 
