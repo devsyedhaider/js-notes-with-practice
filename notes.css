@@ -1898,6 +1898,8 @@ never (error)
 
 ---- Example
 
+---- Example
+
 let promise = new Promise((resolve, reject) => {
   let success = true;
 
