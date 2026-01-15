@@ -26,11 +26,14 @@ async function fetchData() {
 
 fetchData();
 
-fetch("https://jsonplaceholder.typicode.com/posts")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.log("Error:", error);
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then((res) => res.json())
+  .then((users) => {
+    let list = document.getElementById("list");
+
+    users.forEach((user) => {
+      let li = document.createElement("li");
+      li.textContent = user.name;
+      list.appendChild(li);
+    });
   });
