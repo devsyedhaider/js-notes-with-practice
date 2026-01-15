@@ -2068,6 +2068,94 @@ Fetch API is used to get data from a server or send data to a server (API).
 👉 Mostly used for GET, POST, PUT, DELETE requests
 
 
+✅ GET — Get data
+
+Use: Data lena
+
+📌 Jab server se data chahiye ho
+📌 Koi change nahi hota
+
+Example:
+👉 Users list dekhni ho
+👉 Products show karni ho
+
+fetch("/users"); // GET
+
+
+🗣️ Roman Urdu:
+
+GET ka matlab hai sirf data mangwana
+
+✅ POST — Send data
+
+Use: Naya data bhejna
+
+📌 Server ko new data send karte hain
+📌 Mostly form submit ke liye
+
+Example:
+👉 Signup
+👉 Login
+👉 Create post
+
+fetch("/users", {
+  method: "POST",
+  body: JSON.stringify({ name: "Ali" })
+});
+
+
+🗣️ Roman Urdu:
+
+POST ka matlab hai naya data server ko dena
+
+✅ PUT — Update data
+
+Use: Purana data update karna
+
+📌 Pehle se mojood data ko change karte hain
+📌 Mostly edit ke liye
+
+Example:
+👉 Profile update
+👉 Post edit
+
+fetch("/users/1", {
+  method: "PUT",
+  body: JSON.stringify({ name: "Haider" })
+});
+
+
+🗣️ Roman Urdu:
+
+PUT ka matlab hai existing data ko update karna
+
+✅ DELETE — Delete data
+
+Use: Data delete karna
+
+📌 Server se data remove kar dete hain
+
+Example:
+👉 User delete
+👉 Post delete
+
+fetch("/users/1", {
+  method: "DELETE"
+});
+
+
+🗣️ Roman Urdu:
+
+DELETE ka matlab hai data ko hata dena
+
+🔑 One-line Trick (Yaad rakhne ka formula)
+GET     → Dekhna
+POST    → Banana
+PUT     → Badalna
+DELETE  → Hatana
+
+
+
 ---------- 🔹 Basic Syntax
 
 fetch("URL")
