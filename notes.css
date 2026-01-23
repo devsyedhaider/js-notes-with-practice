@@ -1084,16 +1084,16 @@ console.log(newarray);
 
 Find the length of array element greater then one and less then four 
 
-const len = ['haider' , 'hh' , 'array' , 'string' , 'mahtab'];
+const data = ['haider' , 'hh' , 'array' , 'string' , 'mahtab'];
 
-let len2 = len.filter((val , index) => {
-  let len3 = val.length;
+let dataFillter = data.filter((val , index) => {
+  let FillterElementLenght = val.length;
    ind = index;
-  return len3 > 1 && len3 < 4;
+  return FillterElementLenght > 1 && FillterElementLenght < 4;
 })
 
-console.log(len); // ['haider' , 'hh' , 'array' , 'string' , 'mahtab']
-console.log(len2 , ind) // hh index of this element 4
+console.log(data); // ['haider' , 'hh' , 'array' , 'string' , 'mahtab']
+console.log(dataFillter , ind) // hh index of this element 4
 
 
 5 ) Reduce method return a value .
@@ -2068,7 +2068,7 @@ Fetch API is used to get data from a server or send data to a server (API).
 👉 Mostly used for GET, POST, PUT, DELETE requests
 
 
-✅ GET — Get data
+---------------- ✅ GET — Get data
 
 Use: Data lena
 
@@ -2076,17 +2076,15 @@ Use: Data lena
 📌 Koi change nahi hota
 
 Example:
+
 👉 Users list dekhni ho
 👉 Products show karni ho
 
 fetch("/users"); // GET
-
-
-🗣️ Roman Urdu:
-
 GET ka matlab hai sirf data mangwana
 
-✅ POST — Send data
+
+------------------- ✅ POST — Send data
 
 Use: Naya data bhejna
 
@@ -2094,6 +2092,7 @@ Use: Naya data bhejna
 📌 Mostly form submit ke liye
 
 Example:
+
 👉 Signup
 👉 Login
 👉 Create post
@@ -2103,12 +2102,11 @@ fetch("/users", {
   body: JSON.stringify({ name: "Ali" })
 });
 
-
-🗣️ Roman Urdu:
-
 POST ka matlab hai naya data server ko dena
 
-✅ PUT — Update data
+
+
+----------------- ✅ PUT — Update data
 
 Use: Purana data update karna
 
@@ -2124,12 +2122,11 @@ fetch("/users/1", {
   body: JSON.stringify({ name: "Haider" })
 });
 
-
-🗣️ Roman Urdu:
-
 PUT ka matlab hai existing data ko update karna
 
-✅ DELETE — Delete data
+
+
+------------------ ✅ DELETE — Delete data
 
 Use: Data delete karna
 
@@ -2143,12 +2140,10 @@ fetch("/users/1", {
   method: "DELETE"
 });
 
-
-🗣️ Roman Urdu:
-
 DELETE ka matlab hai data ko hata dena
 
 🔑 One-line Trick (Yaad rakhne ka formula)
+
 GET     → Dekhna
 POST    → Banana
 PUT     → Badalna

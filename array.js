@@ -86,7 +86,7 @@ console.log(num);
 
 // Remove the first element from [1, 2, 3].
 
-num.pop();
+num.shift();
 console.log(num);
 
 // Combine [1,2] and [3,4].
