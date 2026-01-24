@@ -5,7 +5,7 @@ async function fetchData() {
       .value.toLowerCase(); // input value select and convert into lowercase
 
     const response = await fetch(
-      `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+      `https://pokeapi.co/api/v2/pokemon/${pokemonName}`,
     ); // Fetching pokemon data into this url
 
     if (!response.ok) {
@@ -37,3 +37,15 @@ fetch("https://jsonplaceholder.typicode.com/users")
       list.appendChild(li);
     });
   });
+
+async function product() {
+  try {
+    let response = await fetch("https://fakestoreapi.com/products");
+    let data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+product();

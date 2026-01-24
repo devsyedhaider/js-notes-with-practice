@@ -300,7 +300,6 @@ Purpose	                -----     Avoid pushing unwanted files
 Common ignores	        -----     node_modules, .env, logs
 Already tracked?	      -----     Use git rm --cached
 
-
 */
 
 /* ----------------------------- Git stash 
