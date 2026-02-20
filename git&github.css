@@ -9,9 +9,6 @@ Git is version control system it helps you save different versions of your code,
 Github is a web-based platform that provides hosting for git repositories .
 Github help you collaboration into teams members.
 
-
-
-
 */
 
 /* -------------- How to see hide files in git 
@@ -304,9 +301,7 @@ Already tracked?	      -----     Use git rm --cached
 
 /* ----------------------------- Git stash 
 
-
 git stash is a Git command used to save your uncommitted changes temporarily without committing them.
-
 
 
 1️⃣ You want to switch branches but your code is not completed
